@@ -1,0 +1,29 @@
+    <header>
+      <div class="brand" id="branded">
+        <div class="logo">AS</div>
+        <div>
+          <div class="company">Acme Software</div>
+          <div style="font-size:12px;color:var(--muted)">Modern web & cloud solutions</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="cta" href="#contact">Get a quote</a>
+    </header>
+
+    <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("braded");
+
+    if (name) {
+      document.getElementById("branded").textContent = name;
+    }
+  </script>

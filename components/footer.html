@@ -1,0 +1,16 @@
+<footer>
+    <div id="here">
+        <p>&copy; 2025 Software Company. All rights reserved.</p>
+      <p>© <span id="year"></span> Acme Software — Built with care</p>
+      <p style="font-size:.9rem;color:var(--muted)">Follow us on [Twitter] [LinkedIn]</p>
+  </div>
+</footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("here");
+
+    if (name) {
+      document.getElementById("here").textContent = name;
+    }
+  </script>
