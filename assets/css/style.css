@@ -253,7 +253,7 @@ footer p {
   margin: 0;
 }
 
- .backdrop {
+.backdrop {
     display: none;
     position: fixed;
     inset: 0;
