@@ -45,17 +45,23 @@
             </div>
           </div>
 
-                    <script>
+          <script>
             const backdrop = document.querySelector(".backdrop");
             const closeBtn = document.getElementById("closeModal");
 
-            document.getElementById("rticle1").addEventListener("onclick", () => {
-              backdrop.classList.add("active");
+          document.addEventListener("DOMContentLoaded", () => {
+            const projects = document.getElementById("article1");
+            projects.addEventListener("click", () => {
+              console.log("Projects clicked!");
             });
+          });
 
-            document.getElementById("article2").addEventListener("onclick", () => {
-              backdrop.classList.add("active");
+            document.addEventListener("DOMContentLoaded", () => {
+            const projects = document.getElementById("article2")
+            projects.addEventListener("click", () => {
+              console.log("Projects clicked!");
             });
+          });
 
             closeBtn.addEventListener("onclick", () => {
               backdrop.classList.remove("active");
