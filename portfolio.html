@@ -36,15 +36,6 @@
             </article>
           </div>
 
-          <div class="backdrop">
-            <div class="modal">
-              <h2>Project Details</h2>
-              <p>Coing Soon.</p>
-              <button id="closeModal">Close</button>
-            </div>
-          </div>
-
-
           <script>
             const backdrop = document.querySelector(".backdrop");
             const closeBtn = document.getElementById("closeModal");
@@ -65,8 +56,15 @@
               if (e.target === backdrop) backdrop.classList.remove("active");
             });
           </script>
-
         </section>
+
+          <div class="backdrop">
+            <div class="modal">
+              <h2>Project Details</h2>
+              <p>Coing Soon.</p>
+              <button id="closeModal">Close</button>
+            </div>
+          </div>
 
      <footer>
       <div id="footer-placeholder"></div>
