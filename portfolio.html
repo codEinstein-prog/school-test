@@ -19,6 +19,55 @@
           });
       </script>
     </header>
+
+        <section id="projects" class="section">
+          <h2 style="margin:0 0 1rem">Selected projects</h2>
+          <div class="projects">
+            <article id="article1" class="project">
+              <div class="thumb">E-commerce platform</div>
+              <h3 style="margin-top:.75rem">GlobalShop</h3>
+              <p style="margin:0;color:var(--muted)">High-performance storefront and headless CMS integration.</p>
+            </article>
+
+            <article id="article2" class="project">
+              <div class="thumb">Analytics console</div>
+              <h3 style="margin-top:.75rem">Insightly</h3>
+              <p style="margin:0;color:var(--muted)">Realtime analytics and alerting for ops teams.</p>
+            </article>
+          </div>
+
+          <div class="backdrop">
+            <div class="modal">
+              <h2>Project Details</h2>
+              <p>Coing Soon.</p>
+              <button id="closeModal">Close</button>
+            </div>
+          </div>
+
+
+          <script>
+            const backdrop = document.querySelector(".backdrop");
+            const closeBtn = document.getElementById("closeModal");
+
+            document.getElementById("article1").addEventListener("click", () => {
+              backdrop.classList.add("active");
+            });
+
+            document.getElementById("article1").addEventListener("click", () => {
+              backdrop.classList.add("active");
+            });
+
+            closeBtn.addEventListener("click", () => {
+              backdrop.classList.remove("active");
+            });
+
+            backdrop.addEventListener("click", (e) => {
+              if (e.target === backdrop) backdrop.classList.remove("active");
+            });
+          </script>
+
+        </section>
+
      <footer>
       <div id="footer-placeholder"></div>
       <script>
