@@ -127,7 +127,25 @@ nav a.active, nav a:hover {
 }
 
 footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  color: var(--muted);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+footer li {
+    justify-content: space-between;
+    padding-right: 20px;
+}
+footer p {
+  color: #9aa7b3;
+  margin: 0;
 }
