@@ -78,7 +78,14 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Acme Software — Built with care</p>
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('../components/footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
   </footer>
 
   <script>
