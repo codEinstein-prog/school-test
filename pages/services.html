@@ -4,11 +4,22 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Services - Software Company</title>
+  <link rel='stylesheet' href='./assets/css/services.css'>
   <link rel='stylesheet' href='assets/css/style.css'>
   <script src='./scripts/services.js' defer></script>
 </head>
 <body>
-  <header></header>
+    <header>
+      <div id="header-placeholder"></div>
+      <script>
+        fetch('./components/header.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+          });
+      </script>
+    </header>
+
   <!-- 📇 Profile Cards -->
   <section class="cards">
 
@@ -210,6 +221,16 @@
       </div>
     </div>
   </section>
-  <footer></footer>
+
+    <footer>
+      <div id="footer-placeholder"></div>
+      <script>
+        fetch('./components/footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          });
+      </script>
+    </footer>
 </body>
 </html>
