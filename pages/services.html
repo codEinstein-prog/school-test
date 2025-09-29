@@ -4,10 +4,115 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Services - Software Company</title>
-  <link rel='stylesheet' href='assets/css/services.css'>
+  <!--link rel='stylesheet' href='assets/css/services.css'-->
   <script src='./scripts/services.js' defer></script>
 </head>
 <body>
+
+  <style>
+  .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  position: relative;
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+.card:hover { transform: translateY(-5px); }
+
+.card-bg {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-status {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+.card-status.online { background: #28a745; }
+.card-status.offline { background: #dc3545; }
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-name {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+.verified { color: #4da3ff; font-size: 0.9rem; }
+
+.card-tags {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+.card-button {
+  background: #ff6b35;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.card-button:hover { background: #ff8a4a; }
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #fff;
+  color: #333;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #ff6b35;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+</style>
     <header>
       <div id="header-placeholder"></div>
       <script>
