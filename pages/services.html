@@ -1,202 +1,88 @@
-<!DOCTYPE html>
-<html lang='en'>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Services - Software Company</title>
-  <!--link rel='stylesheet' href='assets/css/services.css'-->
-  <script src='./scripts/services.js' defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Services — Acme Software</title>
+  <link rel="stylesheet" href="assets/css/services.css">
 </head>
 <body>
-
-  <style>
-  .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-.card {
-  position: relative;
-  background: #111;
-  color: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.2s;
-}
-.card:hover { transform: translateY(-5px); }
-
-.card-bg {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-
-.card-status {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: 0.25rem 0.6rem;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: #fff;
-}
-.card-status.online { background: #28a745; }
-.card-status.offline { background: #dc3545; }
-
-.card-content {
-  padding: 1rem;
-}
-
-.card-name {
-  margin: 0 0 0.5rem;
-  font-size: 1.2rem;
-}
-.verified { color: #4da3ff; font-size: 0.9rem; }
-
-.card-tags {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  color: #ccc;
-}
-
-.card-description {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-  color: #ddd;
-}
-
-.card-button {
-  background: #ff6b35;
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.card-button:hover { background: #ff8a4a; }
-
-/* Modal */
-.modal-backdrop {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal {
-  background: #fff;
-  color: #333;
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 400px;
-  width: 90%;
-  text-align: center;
-}
-
-.modal button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  background: #ff6b35;
-  color: #fff;
-  border-radius: 8px;
-  cursor: pointer;
-}
-</style>
-    <header>
-      <div id="header-placeholder"></div>
-      <script>
-        fetch('./components/header.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("header-placeholder").innerHTML = data;
-          });
-      </script>
-    </header>
-
-  <!-- 📇 Profile Cards -->
-<section class="cards">
-  <!-- Card 1 -->
-  <div class="card">
-    <img src="https://i.pinimg.com/736x/fd/5d/b0/fd5db03cfc44d0f9b6b4d4b7fdb05340.jpg" alt="Portrait of Lukas Meier" class="card-bg">
-
-    <div class="card-status online">Online</div>
-
-    <div class="card-content">
-      <h3 class="card-name">Lukas Meier <span class="verified">✔</span></h3>
-      <div class="card-tags">
-        <span>⭐ 4.5</span>
-        <span>👥 3.1K</span>
+  <header>
+    <div class="brand">
+      <div class="logo">AS</div>
+      <div>
+        <div class="company">Acme Software</div>
+        <div class="tagline">Modern web & cloud solutions</div>
       </div>
-      <p class="card-description">Digital product designer crafting intuitive, scalable user journeys</p>
-      <button class="card-button" data-name="Lukas Meier">Get In Touch</button>
     </div>
-  </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://yourblog.com" target="_blank">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Card 2 -->
-  <div class="card">
-    <img src="https://i.pinimg.com/736x/80/b2/ff/80b2ff0b40a7b586cdd4cd8ff264d7a9.jpg" alt="Portrait of Max Steiner" class="card-bg">
+  <main class="wrap">
+    <section class="services">
+      <h1>Our Services</h1>
+      <div class="cards">
 
-    <div class="card-status online">Online</div>
+        <!-- Service 1 -->
+        <article class="card">
+          <div class="media">
+            <video autoplay muted loop playsinline>
+              <source src="assets/videos/webdev.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="content">
+            <h2>Web Development</h2>
+            <p>Responsive, high-performance websites and progressive web apps designed to scale with your business.</p>
+            <button class="btn">Learn More</button>
+          </div>
+        </article>
 
-    <div class="card-content">
-      <h3 class="card-name">Max Steiner <span class="verified">✔</span></h3>
-      <div class="card-tags">
-        <span>⭐ 4.0</span>
-        <span>👥 2.4K</span>
+        <!-- Service 2 -->
+        <article class="card">
+          <div class="media">
+            <video autoplay muted loop playsinline>
+              <source src="assets/videos/mobile.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="content">
+            <h2>Mobile Solutions</h2>
+            <p>Cross-platform mobile apps with seamless UX and powerful integrations.</p>
+            <button class="btn">Learn More</button>
+          </div>
+        </article>
+
+        <!-- Service 3 -->
+        <article class="card">
+          <div class="media">
+            <video autoplay muted loop playsinline>
+              <source src="assets/videos/cloud.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="content">
+            <h2>Cloud Consulting</h2>
+            <p>Cloud-native architecture, DevOps pipelines, and security-first deployments.</p>
+            <button class="btn">Learn More</button>
+          </div>
+        </article>
+
       </div>
-      <p class="card-description">Digital designer turning complex workflows into seamless journeys</p>
-      <button class="card-button" data-name="Max Steiner">Get In Touch</button>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <!-- Card 3 -->
-  <div class="card">
-    <img src="https://i.pinimg.com/736x/37/d4/7b/37d47b1d8979b4fe22014c89bedd5c10.jpg" alt="Portrait of Ueli Huber" class="card-bg">
+  <footer>
+    <p>&copy; <span id="year"></span> Acme Software — Built with care</p>
+  </footer>
 
-    <div class="card-status offline">Offline</div>
-
-    <div class="card-content">
-      <h3 class="card-name">Ueli Huber <span class="verified">✔</span></h3>
-      <div class="card-tags">
-        <span>⭐ 5.0</span>
-        <span>👥 1.7K</span>
-      </div>
-      <p class="card-description">UX strategist designing frictionless, data-driven digital experiences</p>
-      <button class="card-button" data-name="Ueli Huber">Get In Touch</button>
-    </div>
-  </div>
-</section>
-
-<!-- Modal -->
-<div class="modal-backdrop" id="modal">
-  <div class="modal">
-    <h3 id="modal-title">Contact</h3>
-    <p id="modal-text"></p>
-    <button id="close-modal">Close</button>
-  </div>
-</div>
-
-
-    <footer>
-      <div id="footer-placeholder"></div>
-      <script>
-        fetch('./components/footer.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("footer-placeholder").innerHTML = data;
-          });
-      </script>
-    </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
