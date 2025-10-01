@@ -48,9 +48,6 @@ header .brand {
 .company { font-size: 1.1rem; font-weight: bold; }
 .tagline { font-size: 0.8rem; color: var(--muted); }
 
-nav {
-  background-color: #9aa7b3;
-}
 nav ul {
   display: flex;
   list-style: none;
