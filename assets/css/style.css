@@ -30,6 +30,10 @@ header {
   z-index: 10;
 }
 
+header .header-placeholder {
+  background: none;
+}
+
 header .brand {
   display: flex;
   align-items: center;
