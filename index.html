@@ -9,17 +9,14 @@
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <div class="header_placeholder" id="header-placeholder"></div>
-      <script>
-        fetch('./components/header.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("header-placeholder").innerHTML = data;
-          });
-      </script>
-    </header>
-
+    <div class="header_placeholder" id="header-placeholder"></div>
+    <script>
+      fetch('./components/header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+    </script>
     <main>
       <section class="hero">
         <div class="hero-card">
