@@ -22,7 +22,7 @@ body {
   max-width: 1100px;
 }
 
-body, .wrap, header {
+header {
   background: transparent !important;
 }
 
