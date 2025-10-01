@@ -55,11 +55,6 @@ nav a.active, nav a:hover {
   background: var(--accent);
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-}
 .logo {
   width: 56px;
   height: 56px;
