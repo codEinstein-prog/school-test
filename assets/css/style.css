@@ -24,10 +24,46 @@ body {
 
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
+
+header .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo {
+  background: var(--accent);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+}
+.company { font-size: 1.1rem; font-weight: bold; }
+.tagline { font-size: 0.8rem; color: var(--muted); }
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+nav a.active, nav a:hover {
+  background: var(--accent);
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -49,27 +85,11 @@ header {
 .company {
   font-weight: 700;
 }
-nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
 nav li {
     padding-right: 50px;
 }
-nav a {
-  color: #9aa7b3;
-  text-decoration: none;
-  padding: .4rem .6rem;
-  border-radius: 8px;
-}
-nav a:hover {
-  color: #ff6b35;
-  background: rgba(255, 255, 255, 0.03);
-}
+
 .cta {
   background: linear-gradient(90deg, #ff6b35, #ff8a4a);
   padding: .6rem .9rem;
