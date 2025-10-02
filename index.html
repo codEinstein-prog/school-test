@@ -86,26 +86,51 @@
       <section id="contact" class="section">
         <h2 style="margin:0 0 1rem">Let's talk</h2>
         <div class="contact">
-          <form action="#" onsubmit="event.preventDefault();alert('Demo: form submit')">
+          <form id="form1" action="#" onsubmit="event.preventDefault();alert('Demo: form submit')">
             <input placeholder="Your name" required />
             <input placeholder="Company" />
             <input type="email" placeholder="Email" required />
             <input placeholder="Budget (optional)" />
-            <textarea rows="5" placeholder="Brief project description"></textarea>
+            <textarea rows="5" placeholder="Brief project description or phone number"></textarea>
             <div style="display:flex;gap:.5rem">
-              <button type="submit">Request a quote</button>
-              <button type="button" style="background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)">Schedule call</button>
+              <button id="submit1" type="submit">Request a quote</button>
+              <button id="submit2" type="button" style="background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)">Schedule call</button>
             </div>
           </form>
 
           <aside style="background:var(--card);padding:1rem;border-radius:12px;color:var(--muted)">
             <h4 style="margin:0 0 .5rem">Contact</h4>
-            <p style="margin:0">hello@acmesoftware.example</p>
-            <p style="margin:.25rem 0 0">+1 (555) 123-4567</p>
+            <p style="margin:0">net4gmur@gmail.com</p>
+            <p style="margin:.25rem 0 0">+1 (876) 919-5439</p>
             <div style="margin-top:1rem;font-size:.9rem">Office: 123 Innovation Drive, Suite 400</div>
           </aside>
         </div>
       </section>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const submit1 = document.getElementById("submit1");
+          const submit2 = document.getElementById("submit2");
+
+          submit1.addEventListener("click", () => {
+            const form1 = document.getElementById("form1");
+            const name = form1.querySelector("[name='name']").value;
+            const email = form1.querySelector("[name='email']").value;
+            const message = form1.querySelector("[name='message']").value;
+
+            const mailtoLink = `mailto:net4gmur@gmail.com?subject=New Form Submission&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+            window.location.href = mailtoLink;
+          });
+
+          submit2.addEventListener("click", () => {
+            const form1 = document.getElementById("form1");
+            const phone = form1.querySelector("[name='message']").value;
+
+            const mailtoLink = `mailto:net4gmur@gmail.com?subject=Request Callback&body=Please call back at: ${textarea}`;
+            window.location.href = mailtoLink;
+          });
+        });
+      </script>
 
     </main>
 
