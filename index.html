@@ -87,10 +87,10 @@
         <h2 style="margin:0 0 1rem">Let's talk</h2>
         <div class="contact">
           <form id="form1" action="#" onsubmit="event.preventDefault();alert('Demo: form submit')">
-            <input placeholder="Your name" required />
-            <input placeholder="Company" />
-            <input type="email" placeholder="Email" required />
-            <input placeholder="Budget (optional)" />
+            <input name="name" type="text" placeholder="Your name" required />
+            <input name="company" type="text" placeholder="Company" />
+            <input name="email" type="email" placeholder="Email" required />
+            <input name="Budget" type="number" placeholder="Budget (optional)" />
             <textarea rows="5" placeholder="Brief project description or phone number"></textarea>
             <div style="display:flex;gap:.5rem">
               <button id="submit1" type="submit">Request a quote</button>
@@ -116,6 +116,8 @@
             const form1 = document.getElementById("form1");
             const name = form1.querySelector("[name='name']").value;
             const email = form1.querySelector("[name='email']").value;
+            const company = form1.querySelector("[name='company']").value;
+            const Budget = form1.querySelector("[name='Budget']").value;
             const message = form1.querySelector("[name='message']").value;
 
             const mailtoLink = `mailto:net4gmur@gmail.com?subject=New Form Submission&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
