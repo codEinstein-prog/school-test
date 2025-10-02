@@ -38,37 +38,38 @@
           <div class="backdrop">
             <div class="modal">
               <h2>Project Details</h2>
-              <p>Coing Soon.</p>
+              <p>Coming Soon.</p>
               <button id="closeModal">Close</button>
             </div>
           </div>
 
-          <script>
-            const backdrop = document.querySelector(".backdrop");
-            const closeBtn = document.getElementById("closeModal");
+        <script>
+          const backdrop = document.querySelector(".backdrop");
+          const closeBtn = document.getElementById("closeModal");
 
           document.addEventListener("DOMContentLoaded", () => {
-            const projects = document.getElementById("projects");
-            projects.addEventListener("click", () => {
-              console.log("Projects clicked!");
+            const project1 = document.getElementById("article1");
+            const project2 = document.getElementById("article2");
+
+            project1.addEventListener("click", () => {
+              console.log("Project 1 clicked!");
+              backdrop.classList.add("active");
+            });
+
+            project2.addEventListener("click", () => {
+              console.log("Project 2 clicked!");
+              backdrop.classList.add("active"); 
             });
           });
 
-            document.addEventListener("DOMContentLoaded", () => {
-            const projects = document.getElementById("article2")
-            projects.addEventListener("click", () => {
-              console.log("Projects clicked!");
-            });
+          closeBtn.addEventListener("click", () => {
+            backdrop.classList.remove("active");
           });
 
-            closeBtn.addEventListener("onclick", () => {
-              backdrop.classList.remove("active");
-            });
-
-            backdrop.addEventListener("click", (e) => {
-              if (e.target === backdrop) backdrop.classList.remove("active");
-            });
-          </script>
+          backdrop.addEventListener("click", (e) => {
+            if (e.target === backdrop) backdrop.classList.remove("active");
+          });
+        </script>
 
           <section id="contact" class="section">
             <h2 style="margin:0 0 1rem">Let's talk</h2>
